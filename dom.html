@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" name="" id="inputField">
+
+    <button onclick="add()">Button</button>
+
+    <div id="myfield"></div>
+    
+</body>
+</html>
+<script>
+
+    let myInput = document.getElementById("inputField") 
+
+    let myField = document.getElementById('myfield');
+
+    console.log(myInput);
+    console.log(myInput.value);
+
+    function add() {
+
+       let myInputValue = myInput.value.toUpperCase();
+
+    //    myInputValue = myInputValue;
+
+        console.log(myInputValue);
+        
+        
+       myField.innerHTML = myInputValue
+        //console.log('This is a text');
+    }
+
+    // console.log(myField.innerHTML) 
+
+    // myField.innerHTML = "My name is Tayo"
+
+   /*  console.log(myField.innerHTML) 
+
+     */
+
+    // console.log(myInput);
+
+    // console.log(myField);
+    
+    
+
+
+</script>

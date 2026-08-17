@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+
+    <input type="text" id="myfield1">
+    <input type="text" id="myfield2">
+
+    <button onclick="submit()">Submit</button>
+
+    <div id="result">Ade</div>
+    
+</body>
+</html>
+<script>
+
+    let myField1 = document.getElementById('myfield1');
+    let myField2 = document.getElementById('myfield2');
+
+    let outputField = document.getElementById('result');
+
+    //console.log(myField.value);
+    
+
+    // console.log('2' + 'a'); // '2a'
+    // console.log('2' + '2'); // 22
+    // console.log(2 + 2 + '2'); // 42
+
+    // let text1 = "This is a book";
+    // let text2 = "worm";
+
+    // let newText = text1 + text2 // This is a book  worm
+
+    // let myNumber = '1234'; 
+    
+    // 2 + 2 // 4
+    // Arithmetric operators ...
+
+    function submit() {
+
+        let myField1Value = Number(myField1.value); 
+        let myField2Value = Number(myField2.value); 
+
+        console.log(myField1Value + 10);
+        console.log(myField1Value - 10);
+        console.log(myField1Value / 2);
+        console.log(myField1Value * 2);
+        console.log(myField1Value % 5);
+
+        let addition = myField1Value + myField2Value 
+           //console.log(raiseToPower); console.log(Math.pow(3, myFieldValue));
+
+        // outputField.innerHTML = 'The addition of ' + myField1Value + ' and ' + myField2Value + ' = ' + addition
+
+        outputField.innerHTML = `The addition of ${myField1Value} and ${myField2Value} = ${addition}`
+
+        // console.log('1234' + 10);
+        
+        
+    }
+    // console.log(Math.floor(2.1999)); // 2
+
+    // console.log(Math.ceil(6.00001)); // 7
+
+    // console.log(Math.round(4.5)); // 5
+    // console.log(Math.round(4.4)); // 4
+</script>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <input type="text" id="numberField1">
+    <input type="text" id="numberField2">
+    <button onclick="divide()">divide</button>
+    <button onclick="add()">add</button>
+    <div id="outputField"></div>
+    
+</body>
+
+<script>
+
+    let number1 = 4;
+    let number2 = 2;
+     
+    console.log(number1 + number2);
+
+    console.log(number1 - number2);
+
+    console.log(number1 * number2);
+
+    console.log(number1 / number2);
+
+    console.log(5 % 2);
+
+    console.log(2 ** 3); // Math.pow()
+
+    console.log(Math.pow(2, 3));
+    console.log(Math.sqrt(4));
+
+    console.log(Math.cbrt(27));
+
+    let number3 = 2.1567;
+
+    console.log(Math.floor(number3)); // 2
+    console.log(Math.ceil(number3)); // 3
+
+    let number4 = 1000.1 ; 
+    console.log(Math.ceil(number4)); // 
+    console.log(Math.floor(number4)); //
+
+    
+
+    let number5 = 2.0001;
+    
+    console.log(Math.ceil(number5));
+
+    let number6 = 2.4;
+    
+    console.log(Math.round(number6)); //
+
+    console.log(Math.PI); //
+    
+    
+    
+    let number7 = +'abc1234';
+
+    console.log(typeof number7);
+    
+    let myNumberField1 = document.getElementById('numberField1');
+    let myNumberField2 = document.getElementById('numberField2');
+    let outputField = document.getElementById('outputField');
+
+    function divide() {
+    
+        let numberValue1 = +myNumberField1.value.trim();
+        let numberValue2 = +myNumberField2.value.trim();
+        let answer = numberValue1 / numberValue2
+
+
+        outputField.innerHTML = `${numberValue1} / ${numberValue2} = ${answer}`;
+        // numberValue = +numberValue
+    }
+
+    function add() {
+    
+        let numberValue1 = +myNumberField1.value.trim();
+        let numberValue2 = +myNumberField2.value.trim();
+        let answer = numberValue1 + numberValue2
+
+
+        outputField.innerHTML = `${numberValue1} / ${numberValue2} = ${answer}`;
+        // numberValue = +numberValue
+    }
+
+    
+
+</script>
+</html>

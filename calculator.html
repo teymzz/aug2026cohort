@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #screen {
+            border:solid;
+            padding: 10px;
+        }
+        .fields input{
+            border: solide 1px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="">
+
+        <div id="screen"></div>
+        <div class="fields">
+            <input id="firstInput" type="text">
+            <input id="secondInput" type="text">
+        </div>
+        <button onclick="add()">+</button>
+        <button onclick="subtract()">-</button>
+        <button onclick="multiply()">*</button>
+        <button onclick="divide()">/</button>
+        <button onclick="modulus()">%</button>
+
+    </div>
+    
+</body>
+
+<script>
+
+    let firstInput = document.getElementById('firstInput');
+    let secondInput = document.getElementById('secondInput');
+    let screen = document.getElementById('screen')
+
+    function add() {
+
+        let firstValue = +firstInput.value.trim()
+        let secondValue = +secondInput.value.trim()
+
+        let total = firstValue + secondValue;
+
+        screen.innerHTML = total;
+
+    }
+
+    function subtract() {
+
+        let firstValue = +firstInput.value.trim()
+        let secondValue = +secondInput.value.trim()
+
+        let total = firstValue - secondValue;
+
+        screen.innerHTML = total;
+
+    }
+
+    function multiply() {
+
+        let firstValue = +firstInput.value.trim()
+        let secondValue = +secondInput.value.trim()
+
+        let total = firstValue * secondValue;
+
+        screen.innerHTML = total;
+
+    }
+
+    function divide() {
+
+        let firstValue = +firstInput.value.trim()
+        let secondValue = +secondInput.value.trim()
+
+        let total = firstValue / secondValue;
+
+        screen.innerHTML = total;
+
+    }
+
+
+    let myNumber1= 30.00000000001 // Math.ceil()  31
+    let myNumber2= 30.9999 // Math.floor()  30
+
+
+    Math.random() //// 0 - 0.9999 
+
+    let myNumber3 = 10;
+
+    // console.log(secondSide);
+    
+
+    // console.log(Math.random() * 10); // (0 * 10) - (0.99999 * 10)
+    // console.log(Math.random() * 10); // (0) - (9.9999)
+
+
+    // console.log(Math.random() * 12); // (0 * 12) - (9.9999 * 12)
+
+
+    // (Math.random()) * 10;
+    // (0, 0.9999) * 10 =  0, 9.999
+
+    // (0, 0.99999) * 15 = 0, 14.9999
+    // (0, 0.99999) * 17 = 0, 16.9999
+
+    let randomNumber = (Math.random()) * 17; // 0, 16.999
+
+    console.log(Math.floor(randomNumber)); // 0,  16
+
+
+    let ourGeneratedNumber = Math.ceil(randomNumber)// 0,  17
+
+
+    console.log(ourGeneratedNumber + 1); //
+
+
+    // task : generate a number between 1 and 17 
+
+    let randomNumber2 = ( Math.ceil(Math.random() * 17) ) + 1 // 1, 18
+
+    let randomX = Math.random() * 16; // 0, 15.99
+    let randomNumber3 = ( Math.ceil(randomX) + 1) // 1, 17
+
+    // task : generate a number between 0 and 15
+    
+    // Math.random(); 0 - 0.9999
+    
+    Math.random() * 15; // 0 - 14.9999
+
+    console.log(Math.ceil(Math.random() * 15));
+
+    
+    console.log(Math.floor(Math.random() * 16)); // 0 - 15
+    
+
+    // Task: generate a number between 2 and 17 
+ 
+    let randomNumber4 = Math.ceil(Math.random() * 15) + 2
+ 
+    let randomNumber5 = Math.floor(Math.random() * 16) + 2
+    // logical operator 
+    // = 
+    // == 
+    // === 
+    // 
+
+    console.log(2 === 2);
+
+
+    // Truthy
+
+
+
+</script>
+</html>
