@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input id="firstInput" type="text">
+    <input id="secondInput" type="text">
+    <button onclick="generate()">submit</button>
+
+</body>
+<script>
+
+    let firstInput = document.getElementById('firstInput')
+    let secondInput = document.getElementById('secondInput')
+
+    let randomH = Math.floor(Math.random() * (30 - 15 + 1)) + 15;
+
+    console.log(randomH);
+    
+
+    //  0 - 16
+    function generate() {
+
+        let firstValue = +firstInput.value; // min range // 2
+        let secondValue = +secondInput.value; // max range // 8
+
+         Math.floor(Math.random() * (secondValue - firstValue + 1)) + firstValue;
+
+    
+        //let randomNumber = Math.floor((Math.random() * (secondValue - firstValue + 1))) + firstValue;
+    
+        console.log(randomNumber);
+    }
+
+
+// Assignment Operators
+   let numberA = 10; 
+
+   console.log(numberA); // 10
+
+   console.log(numberA + 10);
+   
+   
+   numberA = '10';
+   
+   console.log(numberA); // 10
+
+   console.log(numberA + 10);
+
+   let numberB = 20; 
+
+//    numberB = numberB + 10 ; // 30 
+    numberB += 10  // addition
+
+    numberB -= 10  // 
+
+    console.log(numberB); // 20 
+
+    numberB *= 20;
+    
+    console.log(numberB); // 400
+
+    numberB /= 2;
+    
+    console.log(numberB); // 200
+
+    numberB %= 2;
+    
+    console.log(numberB); // 0
+
+// Comparison operators 
+
+console.log(1 == true); // true: weaker comparison operator
+console.log(1 === true);// false: strict data-type comparison operator 
+console.log(2 > 3); // false
+console.log(2 < 3); // true
+console.log(2 < 3); // true
+console.log(2  ===  3); // false
+console.log(3  ===  3); // true
+console.log(!true); // true
+console.log(2  !=  3); // true
+console.log(3  !=  3); // false
+console.log(3  >=  3); // true
+console.log(5  >=  3); // true
+console.log(5  <=  3); // false
+
+
+
+
+
+
+
+
+
+
+
+    
+</script>
+</html>
