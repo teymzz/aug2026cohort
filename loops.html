@@ -6,6 +6,8 @@
     <title>Document</title>
 </head>
 <body>
+
+    <div id="output"></div>
     
 </body>
 <script>
@@ -16,12 +18,49 @@
     // for( let number = 5; number <= 10;  number++){
     //         console.log(number);
     // }
+    //    let arrayValue = myArray[i]; 
+    let myArray = ['LAGOS','OYO','KWARA','JOS','RIVERS','ENUGU','IMO','JIGAWA', "ILORIN"]
 
-    let myArray = ['LAGOS','OYO','KWARA','JOS','RIVERS','ENUGU','IMO','JIGAWA']
+    // for(let i = 0;  i < myArray.length;  i++){
+    //     console.log(i);
+    // }
+    // myArray[2].toLowerCase(); 
 
+    // Modifying array values
+
+    // myArray.splice( 2, 1, myArray[2].toLowerCase() )
+
+    // myArray[0] = myArray[0].toLowerCase(); 
+    // myArray[1] = myArray[1].toLowerCase(); 
+    // myArray[2] = myArray[2].toLowerCase(); 
+
+    // console.log(myArray);
+    
+    for(let i = 0;  i <= (myArray.length - 1);  i++){
+        myArray[i] = myArray[i].toLowerCase(); // 0
+    }
+
+    console.log(myArray);
+
+    let outputField = document.getElementById('output');
+
+    let myArray2 = ['LAGOS','OYO','KWARA','JOS','RIVERS','ENUGU','IMO','JIGAWA', "ILORIN"]
+
+    // for (let index = 0; index < myArray2.length; index++) {
+    //     outputField.innerHTML += `${index + 1}. ${myArray2[index]} <br>`;
+    // }
     
     // for( let number = 5; number >= -10; number--){
     //         console.log(number);
     // }
+
+    // 0 - 12
+
+    for(number = 0;  number <= 12; number++){
+
+        let result = 2 * number; //
+         outputField.innerHTML +=` 2 * ${number}  = ${ result } <br>`
+    }
+
 </script>
 </html>
