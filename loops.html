@@ -56,11 +56,31 @@
 
     // 0 - 12
 
+    // for loop
     for(number = 0;  number <= 12; number++){
 
         let result = 2 * number; //
          outputField.innerHTML +=` 2 * ${number}  = ${ result } <br>`
     }
 
+    let countries = ['Finland','Rwanda','Canada','USA','Nigeria', 'Austria']
+
+
+    // for(let index=0; index < countries.length ; index++){
+    //      let country = countries[index]; // 
+         
+    //      console.log(country);
+    //      if(country === 'Canada') break;
+
+    // }
+
+    for(let index=0; index < countries.length ; index++){
+         let country = countries[index]; // 
+         
+         if(country === 'Canada') continue;
+
+         console.log(country);
+
+    }
 </script>
 </html>

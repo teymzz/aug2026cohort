@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .table {
+            background-color: red;
+            color: white;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <input id="firstNumber" type="text">
+    <input id="secondNumber" type="text">
+    <button onclick="submit()">Submit</button>
+
+    <div id="output">
+
+    </div>
+    
+</body>
+</html>
+<script>
+
+    let firstNumberElement = document.getElementById('firstNumber')
+    let secondNumberElement = document.getElementById('secondNumber');
+    let outputField = document.getElementById('output');
+
+    function submit() {
+        let firstNumber = +firstNumberElement.value;  // minimum number
+        let secondNumber = +secondNumberElement.value; // maximum number 
+        
+        for(let range = firstNumber; range <= secondNumber; range++) {
+            
+            let outputVar = '';
+            
+             outputVar += `<div class="table"><h4>${ range} times table </h4>`
+
+            for(let multiplier = 0; multiplier <=12; multiplier++){
+               outputVar += ` ${range} * ${multiplier} = ${ range * multiplier } <br>`;
+            }
+            
+             outputVar += '</div>'
+
+             outputField.innerHTML += outputVar;
+
+        }
+    }
+
+
+</script>
