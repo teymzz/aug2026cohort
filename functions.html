@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- <button onclick="sum()"></button> -->
+     <input type="text" id="num1">
+     <input type="text" id="num2">
+     <button onclick="calculate('+')">Add</button>
+     <button onclick="calculate('*')"> Multiply </button>
+    
+</body>
+<script>
+    // sum(); // 3
+    // sum(); // 3
+    // sum(); // 3
+    // sum(); // 3
+
+    function  calculate ( operator ) { 
+        let  num1Element = document.getElementById('num1');
+        let  num2Element = document.getElementById('num2');
+        let num1 = +num1Element.value
+        let num2 = +num2Element.value
+
+        if(operator === '+'){
+            console.log(num1 + num2);
+        }else if(operator === '*') {
+            console.log(num1 * num2);
+        }
+    }
+
+    // sum(30);
+    // sum(40); // 
+</script>
+</html>

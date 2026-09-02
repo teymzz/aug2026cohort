@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        #output:not(:empty) {
+            padding: 1em;
+            background-color: blueviolet;
+            color: white;
+        }
+    </style>
+  </head>
+  <body>
+    <input id="inputField" />
+    <button onclick="todo()">ADD TODO LIST</button> <br><br>
+    <div id="output"></div>
+  </body>
+  <script>
+     let array = []
+     let outputField = document.getElementById('output')
+    function todo() {
+      let inputFieldElement = document.getElementById(`inputField`);
+    //   let outputElement = document.getElementById(`output`);
+      let inputField = inputFieldElement.value.trim();
+
+        // display todo
+        if(inputField===''){
+            alert('inputField must not be empty')
+        }
+        else{ 
+                    array.push(inputField)
+        console.log(array);
+        inputFieldElement.value= ""
+
+            let list = ''
+            for (let index =0 ; index < array.length; index++) {
+              list = list + `${index + 1}. ${array[index]} <button>Edit</button> <button>Delete</button> <br>`
+                
+            }
+              outputField.innerHTML = list
+
+            
+         
+        }
+
+        
+        
+     
+
+
+    }
+  </script>
+</html>
